@@ -1,0 +1,24 @@
+{
+    "name": "matycz/lemo-debug",
+    "description": "",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "lemo"
+    ],
+    "homepage": "https://github.com/MatyCZ/LemoDebug",
+    "authors": [
+        {
+            "name": "Matej Szendi"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lemo\\Debug\\": "src/"
+        }
+    }
+}
