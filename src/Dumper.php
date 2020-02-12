@@ -13,8 +13,15 @@ class Dumper
      */
     public static function dump($value)
     {
-        $headerAccept = $_SERVER['HTTP_ACCEPT'] ? trim(strtolower($_SERVER['HTTP_ACCEPT'])) : null;
-        $headerContentType = $_SERVER['HTTP_CONTENT_TYPE'] ? trim(strtolower($_SERVER['HTTP_CONTENT_TYPE'])) : null;
+        $headerAccept = null;
+        if (!empty($_SERVER['HTTP_ACCEPT'])) {
+            $headerAccept = trim(strtolower($_SERVER['HTTP_ACCEPT']));
+        }
+
+        $headerContentType = null;
+        if (!empty($_SERVER['HTTP_CONTENT_TYPE'])) {
+            $headerContentType = trim(strtolower($_SERVER['HTTP_CONTENT_TYPE']));
+        }
 
         if (in_array($headerAccept, self::$typeToJson)) {
             self::toJson($value);
