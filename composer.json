@@ -7,7 +7,7 @@
         "laminas",
         "lemo"
     ],
-    "homepage": "https://github.com/MatyCZ/lemo-debug",
+    "homepage": "https://github.com/MatyCZ/php-lemo-debug",
     "authors": [
         {
             "name": "Matej Szendi"
